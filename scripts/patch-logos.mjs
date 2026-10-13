@@ -37,6 +37,16 @@ for (const [marker, repl] of targets) {
     n++;
   }
 }
+// Visible text hard-coded in the app bundle
+const swaps = [
+  ['"Vaultwarden Web"', JSON.stringify(name)],
+  [' A modified version of the Bitwarden\u00ae Web Vault for Vaultwarden (an unofficial rewrite of the Bitwarden\u00ae server).', ` ${name}, your private password manager.`],
+  [' Vaultwarden is not associated with the Bitwarden\u00ae project nor Bitwarden Inc. ', ' '],
+  ['otpauth://totp/Vaultwarden:', `otpauth://totp/${name.replace(/ /g, "%20")}:`],
+];
+let t = 0;
+for (const [a, b] of swaps) { const c = js.split(a).length - 1; if (c) { js = js.split(a).join(b); t += c; } else console.warn("not found:", a.slice(0, 50)); }
+console.log(`replaced ${t} hard-coded text strings`);
 writeFileSync(path, js);
 console.log(`patched ${n} inline logo SVGs in ${f}`);
 if (n < 4) { console.error("expected at least 4 replacements"); process.exit(1); }

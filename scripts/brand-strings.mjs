@@ -21,3 +21,12 @@ for (const entry of Object.values(data)) {
 }
 writeFileSync(file, JSON.stringify(data, null, 2) + "\n");
 console.log(`renamed ${changed} strings, left ${kept} that reference the official apps or services`);
+
+// "Vaultwarden" appears in a few translated strings too, in every language
+import { readdirSync, existsSync } from "node:fs";
+for (const l of readdirSync(`${dir}/locales`)) {
+  const f = `${dir}/locales/${l}/messages.json`;
+  if (!existsSync(f)) continue;
+  const t = readFileSync(f, "utf8");
+  if (t.includes("Vaultwarden")) writeFileSync(f, t.replaceAll("Vaultwarden", name));
+}

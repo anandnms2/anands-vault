@@ -97,3 +97,22 @@ nav .av-on-dark, bit-side-nav .av-on-dark, bit-nav-logo .av-on-dark { display: i
   background: url(../images/icon-white.png) center / contain no-repeat;
 }
 html:not(.theme_dark) main .bwi-bitwarden-shield:before { background-image: url(../images/icon-dark.png); }
+
+/* Top / side navigation uses its own token set (new web vault design system) */
+html:root, html.theme_dark {
+  --color-nav-bg-primary: #18181B;
+  --color-nav-bg-primary-hover: #27272A;
+  --color-nav-bg-secondary: #18181B;
+  --color-nav-bg-secondary-hover: #27272A;
+  --color-nav-fg-primary: #FFFFFF;
+  --color-nav-fg-secondary: #E4E4E7;
+  --color-nav-border-primary: #3F3F46;
+  --color-nav-border-secondary: #3F3F46;
+  --color-nav-border-focus: #F68712;
+  --color-nav-bg-selected: #09090B;
+  --color-nav-bg-active: #09090B;
+}
+/* Active nav item: orange underline like the design */
+bit-nav-item [aria-current="page"], bit-nav-item .active, a[aria-current="page"].tw-bg-bg-nav-hover {
+  box-shadow: inset 3px 0 0 #F68712;
+}
