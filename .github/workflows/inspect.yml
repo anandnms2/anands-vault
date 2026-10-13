@@ -1,0 +1,27 @@
+name: inspect
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect web vault
+        run: |
+          mkdir -p report
+          docker create --name u vaultwarden/server:latest
+          docker cp u:/web-vault ./wv
+          {
+            echo "## version"; cat wv/version.json 2>/dev/null; echo
+            echo "## top"; ls wv | head -50
+            echo "## images"; find wv -type f \( -name '*.png' -o -name '*.svg' -o -name '*.ico' -o -name '*.webp' \) -printf '%P %s\n' | sort
+            echo "## files mentioning logo in name"; find wv -iname '*logo*' -o -iname '*shield*' -o -iname '*vaultwarden*' -o -iname '*bitwarden*' | head -50
+            echo "## index.html"; cat wv/index.html | head -c 4000
+            echo "## theme css"; ls wv/css 2>/dev/null
+            echo "## inline svg/data-uri logos in js"; grep -rlE 'data:image/svg\+xml|viewBox="0 0 (1[0-9]{2}|[0-9]{2,3}) ' wv --include=*.js | head -20
+            echo "## references to image paths in js/css"; grep -rhoE '[A-Za-z0-9_./-]*(logo|shield|icon)[A-Za-z0-9_@.-]*\.(png|svg|ico)' wv --include=*.js --include=*.css --include=*.html | sort | uniq -c | sort -rn | head -60
+            echo "## vaultwarden mentions in css"; grep -rho 'url([^)]*)' wv --include=*.css | sort | uniq -c | sort -rn | head -40
+          } > report/web-vault.txt 2>&1
+          git config user.name gha; git config user.email gha@users.noreply.github.com
+          git add report && git commit -qm "inspect report" && git push
