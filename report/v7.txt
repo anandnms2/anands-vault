@@ -1,1 +1,6 @@
-### BRAND SCALE SELECTOR: .theme_dark
+--color-brand-500:  [-]  --color-brand-500: #418bfb;
+--color-bg-brand:  [-]  --color-bg-brand: var(--color-brand-700);
+--color-bg-brand:  [.theme_dark]  --color-bg-brand: var(--color-brand-400);
+--color-fg-brand:  [-]  --color-fg-brand: var(--color-brand-700);
+--color-fg-brand:  [.theme_dark]  --color-fg-brand: var(--color-brand-400);
+--color-gray-900:  [-]  --color-gray-900: #0f172b;
