@@ -43,6 +43,8 @@ const swaps = [
   ['"Vaultwarden Web"', JSON.stringify(name)],
   [' A modified version of the Bitwarden\u00ae Web Vault for Vaultwarden (an unofficial rewrite of the Bitwarden\u00ae server).', ` ${name}, your private password manager.`],
   [' Vaultwarden is not associated with the Bitwarden\u00ae project nor Bitwarden Inc. ', ' '],
+  ['&issuer=Vaultwarden"', `&issuer=${name.replace(/ /g, "%20")}"`],
+  ['["alt","Vaultwarden",', `["alt",${JSON.stringify(name)},`],
   ['otpauth://totp/Vaultwarden:', `otpauth://totp/${name.replace(/ /g, "%20")}:`],
 ];
 let t = 0;

@@ -25,6 +25,7 @@ FROM docker.io/vaultwarden/server:${VW_VERSION}
 ARG BRAND_NAME
 # Public https URL of your vault, e.g. https://vault.anands.xyz (used for the email logo link)
 ARG PUBLIC_URL
+RUN rm -rf /web-vault
 COPY --from=brand /web-vault /web-vault
 # Outside /data on purpose: /data is a mounted volume and would hide these files.
 COPY templates /branding/templates

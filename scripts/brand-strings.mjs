@@ -11,7 +11,7 @@ for (const loc of ["en", "en_GB", "en_IN"]) {
 const file = `${dir}/locales/${loc}/messages.json`;
 if (!existsSync(file)) continue;
 const data = JSON.parse(readFileSync(file, "utf8"));
-const keep = /Authenticator|Secrets Manager|Families|Key Connector|Duo|Directory Connector|bitwarden\.com|bitwarden\.net|customer|churn/i;
+const keep = /Bitwarden Authenticator|Secrets Manager|Families|Key Connector|Duo|Directory Connector|bitwarden\.(com|net)|customer|churn/;
 
 let changed = 0, kept = 0;
 for (const entry of Object.values(data)) {
