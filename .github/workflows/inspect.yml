@@ -13,8 +13,10 @@ jobs:
         run: |
           set +e
           mkdir -p report
-          docker create --name u vaultwarden/server:latest
-          docker cp u:/web-vault ./wv
+          docker pull vaultwarden/server:latest > report/docker.txt 2>&1
+          docker create --name u vaultwarden/server:latest >> report/docker.txt 2>&1
+          docker cp u:/web-vault ./wv >> report/docker.txt 2>&1
+          docker image inspect vaultwarden/server:latest --format '{{.Config.Entrypoint}} {{.Config.Cmd}}' >> report/docker.txt 2>&1
           {
             echo "## version"; cat wv/version.json 2>/dev/null; echo
             echo "## top"; ls wv | head -50
