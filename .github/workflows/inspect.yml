@@ -1,5 +1,7 @@
 name: inspect
-on: workflow_dispatch
+on:
+  push:
+    paths: ['.github/workflows/inspect.yml']
 permissions:
   contents: write
 jobs:
@@ -24,4 +26,4 @@ jobs:
             echo "## vaultwarden mentions in css"; grep -rho 'url([^)]*)' wv --include=*.css | sort | uniq -c | sort -rn | head -40
           } > report/web-vault.txt 2>&1
           git config user.name gha; git config user.email gha@users.noreply.github.com
-          git add report && git commit -qm "inspect report" && git push
+          git add report && git commit -qm "inspect report" && git pull -q --rebase origin main; git push
