@@ -1,17 +1,269 @@
 ## version
+{ "version": "2026.7.0" }
 
 ## top
-ls: cannot access 'wv': No such file or directory
+281.d0a3f7a4ec45dbad0e29.js
+281.d0a3f7a4ec45dbad0e29.js.map
+368.e3376518108805292230.js
+40.4f177a25d1122df7258c.js
+40.4f177a25d1122df7258c.js.map
+404.html
+405.4fbc5e7bc6fd53dbc60c.js
+405.4fbc5e7bc6fd53dbc60c.js.map
+449.c93b0794cf8da7e0cb0e.js
+449.c93b0794cf8da7e0cb0e.js.map
+677.c700d752d82440a05a97.js
+677.c700d752d82440a05a97.js.map
+680.c43b5dd1efbedb4fa11d.js
+680.c43b5dd1efbedb4fa11d.js.map
+705d7f36186ad5cf9d8b.module.wasm
+712.bdaf453f9231e32b4fe5.js
+712.bdaf453f9231e32b4fe5.js.map
+767.ebd16e950a7c6a1c7706.js
+767.ebd16e950a7c6a1c7706.js.map
+782.ecb0878b527b2995b5d8.js
+782.ecb0878b527b2995b5d8.js.map
+825.a77cba01e3c01f59739e.js
+825.a77cba01e3c01f59739e.js.map
+848.150540f69b06c47750ea.js
+848.150540f69b06c47750ea.js.map
+922.e5c11039e5e4c1258f68.js
+922.e5c11039e5e4c1258f68.js.map
+979.99ef509bf16a2fbe191b.js
+979.99ef509bf16a2fbe191b.js.map
+981.24d02170363ea0cfc1a9.js
+981.24d02170363ea0cfc1a9.js.map
+app
+app-id.json
+browserconfig.xml
+cca56971e438d22818d6.json
+connectors
+duo-redirect-connector.html
+favicon.ico
+fonts
+images
+index.html
+locales
+manifest.json
+proxy-cookie-redirect-connector.html
+redirect-connector.html
+scripts
+sso-connector.html
+styles.31d6cfe0d16ae931b73c.js
+styles.69a03b1c9e8d1aef7100.css
+styles.69a03b1c9e8d1aef7100.css.map
 ## images
-find: ‘wv’: No such file or directory
+favicon.ico 1150
+fonts/bwi-font.8389125e09adb8a3eead.svg 380212
+images/access-intelligence/data-is-in.svg 50227
+images/amex-dark.png 773
+images/amex-light.png 773
+images/android-chrome-192x192.png 3488
+images/android-chrome-512x512.png 10884
+images/apple-touch-icon.png 3250
+images/bwi-globe.png 500
+images/bwi-passkey.png 1078
+images/cards.png 14418
+images/close-button.svg 573
+images/diners_club-dark.png 783
+images/diners_club-light.png 713
+images/discover-dark.png 808
+images/discover-light.png 830
+images/download_apple_appstore.svg 10804
+images/download_google_playstore.svg 15044
+images/favicon-16x16.png 372
+images/favicon-32x32.png 886
+images/globe-bg.png 2232872
+images/icon-dark.png 734
+images/icon-white.png 734
+images/icon-white.svg 3908
+images/icons/android-chrome-192x192.png 3488
+images/icons/android-chrome-512x512.png 10884
+images/icons/apple-touch-icon.png 3250
+images/icons/favicon-16x16.png 372
+images/icons/favicon-32x32.png 886
+images/icons/mstile-150x150.png 3352
+images/icons/safari-pinned-tab.svg 7002
+images/integrations/aws-color.svg 4455
+images/integrations/aws-darkmode.svg 4535
+images/integrations/azure-active-directory.svg 1699
+images/integrations/bitwarden-vertical-blue.svg 6541
+images/integrations/jumpcloud-darkmode.svg 1053
+images/integrations/logo-auth0-badge-color.svg 455
+images/integrations/logo-blumira-color.svg 7312
+images/integrations/logo-blumira-darkmode.svg 7292
+images/integrations/logo-crowdstrike-darkmode.svg 3499
+images/integrations/logo-crowdstrike-lightmode.svg 3452
+images/integrations/logo-datadog-darkmode.svg 5667
+images/integrations/logo-datadog-lightmode.svg 5561
+images/integrations/logo-duo-color.svg 836
+images/integrations/logo-elastic-badge-color.svg 1837
+images/integrations/logo-google-badge-color.svg 809
+images/integrations/logo-huntress-siem-darkmode.svg 6262
+images/integrations/logo-huntress-siem.svg 6282
+images/integrations/logo-jumpcloud-badge-color.svg 1056
+images/integrations/logo-keycloak-icon.svg 1909
+images/integrations/logo-microsoft-entra-id-color.svg 1199
+images/integrations/logo-microsoft-intune-color.svg 931
+images/integrations/logo-microsoft-sentinel-color.svg 1788
+images/integrations/logo-okta-symbol-black.svg 4138
+images/integrations/logo-onelogin-badge-color.svg 473
+images/integrations/logo-panther-round-color.svg 996
+images/integrations/logo-ping-identity-badge-color.svg 5271
+images/integrations/logo-rapid7-black.svg 1588
+images/integrations/logo-splunk-black.svg 3605
+images/integrations/logo-sumo-logic-siem-darkmode.svg 2165
+images/integrations/logo-sumo-logic-siem.svg 2104
+images/integrations/okta-darkmode.svg 4312
+images/integrations/onelogin-darkmode.svg 718
+images/integrations/rapid7-darkmode.svg 1695
+images/integrations/splunk-darkmode.svg 3605
+images/jcb-dark.png 836
+images/jcb-light.png 798
+images/loading-white.svg 288
+images/loading.svg 287
+images/logo-dark@2x.png 5473
+images/logo-white.svg 5093
+images/logo-white@2x.png 7209
+images/logo.svg 5081
+images/maestro-dark.png 752
+images/maestro-light.png 820
+images/mastercard-dark.png 737
+images/mastercard-light.png 757
+images/mstile-150x150.png 3352
+images/register-layout/capterra-logo.svg 3867
+images/register-layout/cnet-logo.svg 1600
+images/register-layout/forbes-logo.svg 3456
+images/register-layout/g2-logo.svg 1260
+images/register-layout/get-app-logo.svg 4246
+images/register-layout/logo-horizontal-white.png 8267
+images/register-layout/logo-horizontal-white.svg 4197
+images/register-layout/new-york-times-logo.svg 4431
+images/register-layout/pcmag-logo.svg 8761
+images/register-layout/usnews-360-badge.svg 33511
+images/register-layout/vault-signup-badges.png 65051
+images/register-layout/wired-logo.png 1731
+images/ru_pay-dark.png 797
+images/ru_pay-light.png 874
+images/safari-pinned-tab.svg 7002
+images/search.svg 5773
+images/secrets-manager/integrations/ansible.svg 1381
+images/secrets-manager/integrations/github-white.svg 1599
+images/secrets-manager/integrations/github.svg 1353
+images/secrets-manager/integrations/gitlab-white.svg 1065
+images/secrets-manager/integrations/gitlab.svg 1969
+images/secrets-manager/integrations/kubernetes.svg 7871
+images/secrets-manager/integrations/terraform.svg 468
+images/secrets-manager/sdks/c-plus-plus.png 12445
+images/secrets-manager/sdks/c-sharp.svg 2333
+images/secrets-manager/sdks/go.svg 2491
+images/secrets-manager/sdks/java-white.svg 4727
+images/secrets-manager/sdks/java.svg 4752
+images/secrets-manager/sdks/php.svg 1258
+images/secrets-manager/sdks/python.svg 2715
+images/secrets-manager/sdks/ruby.png 19253
+images/secrets-manager/sdks/rust-white.svg 6316
+images/secrets-manager/sdks/rust.svg 6316
+images/secrets-manager/sdks/wasm.svg 975
+images/sm-give-access.png 537122
+images/sm.webp 40832
+images/u2fkey-mobile.webp 26854
+images/u2fkey.webp 22080
+images/union_pay-dark.png 1255
+images/union_pay-light.png 1245
+images/visa-dark.png 548
+images/visa-light.png 590
+images/welcome-dialog-graphic.png 95551
+images/yubikey.webp 12884
 ## files mentioning logo in name
-find: ‘wv’: No such file or directory
+wv/images/integrations/logo-google-badge-color.svg
+wv/images/integrations/logo-sumo-logic-siem-darkmode.svg
+wv/images/integrations/bitwarden-vertical-blue.svg
+wv/images/integrations/logo-keycloak-icon.svg
+wv/images/integrations/logo-crowdstrike-lightmode.svg
+wv/images/integrations/logo-ping-identity-badge-color.svg
+wv/images/integrations/logo-splunk-black.svg
+wv/images/integrations/logo-auth0-badge-color.svg
+wv/images/integrations/logo-jumpcloud-badge-color.svg
+wv/images/integrations/logo-microsoft-sentinel-color.svg
+wv/images/integrations/logo-datadog-lightmode.svg
+wv/images/integrations/logo-panther-round-color.svg
+wv/images/integrations/logo-sumo-logic-siem.svg
+wv/images/integrations/logo-microsoft-intune-color.svg
+wv/images/integrations/logo-datadog-darkmode.svg
+wv/images/integrations/logo-microsoft-entra-id-color.svg
+wv/images/integrations/logo-duo-color.svg
+wv/images/integrations/logo-elastic-badge-color.svg
+wv/images/integrations/logo-blumira-darkmode.svg
+wv/images/integrations/logo-crowdstrike-darkmode.svg
+wv/images/integrations/logo-blumira-color.svg
+wv/images/integrations/logo-huntress-siem-darkmode.svg
+wv/images/integrations/logo-okta-symbol-black.svg
+wv/images/integrations/logo-onelogin-badge-color.svg
+wv/images/integrations/logo-rapid7-black.svg
+wv/images/integrations/logo-huntress-siem.svg
+wv/images/logo.svg
+wv/images/register-layout/g2-logo.svg
+wv/images/register-layout/pcmag-logo.svg
+wv/images/register-layout/new-york-times-logo.svg
+wv/images/register-layout/get-app-logo.svg
+wv/images/register-layout/logo-horizontal-white.svg
+wv/images/register-layout/capterra-logo.svg
+wv/images/register-layout/forbes-logo.svg
+wv/images/register-layout/wired-logo.png
+wv/images/register-layout/logo-horizontal-white.png
+wv/images/register-layout/cnet-logo.svg
+wv/images/logo-dark@2x.png
+wv/images/logo-white@2x.png
+wv/images/logo-white.svg
 ## index.html
-cat: wv/index.html: No such file or directory
-## theme css
+<!doctype html><html class="theme_light"><head><meta charset="utf-8"/><meta name="viewport" content="width=1010"/><meta name="theme-color" content="#175DDC"/><title page-title>Vaultwarden Web</title><link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"/><link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#175DDC"/><link rel="manifest" href="cca56971e438d22818d6.json"/><script defer="defer" src="theme_head.6991036cc6ce1ab5eee1.js"></script><link href="styles.69a03b1c9e8d1aef7100.css" rel="stylesheet"></head><body class="layout_frontend"><link rel="stylesheet" href="css/vaultwarden.css"/><app-root><div class="tw-flex tw-flex-col tw-min-h-[100vh]"><div class="tw-pt-5 tw-px-5 tw-fixed"><img class="new-logo-themed !tw-w-[200px]" alt="Vaultwarden"/></div><div class="spinner-container tw-justify-center"><i class="bwi bwi-spinner bwi-spin bwi-3x tw-text-muted" title="Loading" aria-hidden="true"></i></div><div class="tw-relative tw-grow"><div class="tw-hidden md:tw-block [&_svg]:tw-absolute [&_svg]:tw-z-[1] tw-opacity-[.11] [&_svg]:tw-bottom-0 [&_svg]:tw-start-0 [&_svg]:tw-w-[35%] [&_svg]:tw-max-w-[450px]"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 501 226"><g clip-path="url(#left-a)"><path class="tw-fill-illustration-bg-primary" d="M-71.691 6.821a4 4 0 0 1 4-4h296.5a4 4 0 0 1 4 4v188a4 4 0 0 1-4 4h-296.5a4 4 0 0 1-4-4v-188Z"/><path class="tw-fill-illustration-bg-primary" d="M-48.941 25.821a2 2 0 0 1 2-2h127.5v154h-127.5a2 2 0 0 1-2-2v-150Z"/><path class="tw-fill-illustration-bg-tertiary" d="M80.559 25.82a2 2 0 0 1 2-2h125.5a2 2 0 0 1 2 2v150.001a2 2 0 0 1-2 2h-125.5a2 2 0 0 1-2-2v-150ZM45.871 89.854c0 17.155-13.96 31.062-31.182 31.062-17.221 0-31.182-13.907-31.182-31.062s13.96-31.062 31.182-31.062c17.221 0 31.182 13.907 31.182 31.062Z"/><path class="tw-fill-illustration-bg-tertiary" d="M72.396 153.443a57.243 57.243 0 0 1 4.663 22.604v1.222a2 2 0 0 1-2 2h-118.5a2 2 0 0 1-2-2v-1.222a57.243 57.243 0 0 1 4.662-22.604c3.078-7.167 7.59-13.678 13.277-19.163 5.688-5.485 12.44-9.836 19.871-12.805a63.228 63.228 0 0 1 23.44-4.496 63.227 63.227 0 0 1 23.439 4.496c7.431 2.969 14.183 7.32 19.87 12.805 5.688 5.485 10.2 11.996 13.278 19.163Z"/><path class="tw-fill-illustration-bg-secondary" d="M161.629 57.193c0 9.182-7.579 16.625-16.927 16.625-9.349 0-16.928-7.443-16.928-16.625 0-9.181 7.579-16.625 16.928-16.625 9.348 0 16.927 7.444 16.927 16.625Z"/><path class="tw-fill-illustration-bg-secondary" d="M176.028 89.071a29.33 29.33 0 0 1 2.531 11.894c0 .937-.759 1.696-1.696 1.696h-63.109a1.695 1.695 0 0 1-1.695-1.696c0-4.081.86-8.123 2.531-11.894 1.671-3.77 4.12-7.197 7.207-10.083 3.088-2.886 6.753-5.176 10.787-6.738a35.275 35.275 0 0 1 12.725-2.366c4.366 0 8.69.804 12.724 2.366 4.034 1.562 7.699 3.852 10.787 6.738 3.087 2.886 5.537 6.312 7.208 10.083ZM161.629 134.193c0 9.182-7.579 16.625-16.927 16.625-9.349 0-16.928-7.443-16.928-16.625s7.579-16.625 16.928-16.625c9.348 0 16.927 7.443 16.927 16.625Z"/><path class="tw-fill-illustration-bg-secondary" d="M176.028 165.953a28.993 28.993 0 0 1 2.531 11.821c0 .93-.755 1.684-1.685 1.684h-63.131c-.93 0-1.684-.754-1.684-1.684 0-4.057.86-8.074 2.531-11.821 1.671-3.748 4.12-7.153 7.207-10.021 3.088-2.869 6.753-5.144 10.787-6.696a35.456 35.456 0 0 1 12.725-2.352c4.366 0 8.69.799 12.724 2.352 4.034 1.552 7.699 3.827 10.787 6.696 3.087 2.868 5.537 6.273 7.208 10.021ZM-87.441 199.521h332.5v14.5c0 5.523-4.478 10-10 10h-312.5c-5.523 0-10-4.477-10-10v-14.5Z"/><path class="tw-fill-illustration-outline" fill-rule="evenodd" d="M208.059 21.82a4 4 0 0 1 4 4v150.001a4 4 0 0 1-4 4l-255 .001a4 4 0 0 1-4-4v-150a4 4 0 0 1 4-4l255-.001Zm-255 154.002h1.5a57.23 57.23 0 0 1 4.378-21.706l.284-.673c2.982-6.943 7.31-13.27 12.748-18.646l.529-.517c5.688-5.485 12.44-9.836 19.871-12.805a62.937 62.937 0 0 1 10.036-3.065c-11.113## theme css
 ## inline svg/data-uri logos in js
-grep: wv: No such file or directory
+wv/848.150540f69b06c47750ea.js
+wv/app/main.a46e2355765814789865.js
+wv/scripts/dropin.js
 ## references to image paths in js/css
-grep: wv: No such file or directory
+      4 images/favicon-32x32.png
+      4 images/favicon-16x16.png
+      4 images/apple-touch-icon.png
+      2 images/logo-dark@2x.png
+      1 images/logo.svg
+      1 images/logo-white.svg
+      1 /images/favicon-32x32.png
+      1 /images/favicon-16x16.png
+      1 /images/apple-touch-icon.png
+      1 /icon.png
+      1 ../../images/logo-dark@2x.png
 ## vaultwarden mentions in css
-grep: wv: No such file or directory
+      2 url(images/close-button.svg)
+      2 url(fonts/inter.c504db5c06caaf7cdfba.woff2)
+      1 url(images/visa-light.png)
+      1 url(images/visa-dark.png)
+      1 url(images/union_pay-light.png)
+      1 url(images/union_pay-dark.png)
+      1 url(images/ru_pay-light.png)
+      1 url(images/ru_pay-dark.png)
+      1 url(images/mastercard-light.png)
+      1 url(images/mastercard-dark.png)
+      1 url(images/maestro-light.png)
+      1 url(images/maestro-dark.png)
+      1 url(images/logo.svg)
+      1 url(images/logo-white.svg)
+      1 url(images/loading.svg)
+      1 url(images/loading-white.svg)
+      1 url(images/jcb-light.png)
+      1 url(images/jcb-dark.png)
+      1 url(images/discover-light.png)
+      1 url(images/discover-dark.png)
+      1 url(images/diners_club-light.png)
+      1 url(images/diners_club-dark.png)
+      1 url(images/amex-light.png)
+      1 url(images/amex-dark.png)
+      1 url(fonts/bwi-font.f56bcee4cbba5703b721.woff2)
+      1 url(fonts/bwi-font.c4cd5e163205b33d795a.ttf)
+      1 url(fonts/bwi-font.8389125e09adb8a3eead.svg)
+      1 url(fonts/bwi-font.4a9f9fd258d786cf22bf.woff)
+      1 url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA1NzYgNTEyJyB3aWR0aD0nNTc2JyBoZWlnaHQ9JzUxMic+PHBhdGggZmlsbD0ncmdiKDI1NSwyNTUsMjU1KScgZD0nTTU2OS41MTcgNDQwLjAxM0M1ODcuOTc1IDQ3Mi4wMDcgNTY0LjgwNiA1MTIgNTI3Ljk0IDUxMkg0OC4wNTRjLTM2LjkzNyAwLTU5Ljk5OS00MC4wNTUtNDEuNTc3LTcxLjk4N0wyNDYuNDIzIDIzLjk4NWMxOC40NjctMzIuMDA5IDY0LjcyLTMxLjk1MSA4My4xNTQgMGwyMzkuOTQgNDE2LjAyOHpNMjg4IDM1NGMtMjUuNDA1IDAtNDYgMjAuNTk1LTQ2IDQ2czIwLjU5NSA0NiA0NiA0NiA0Ni0yMC41OTUgNDYtNDYtMjAuNTk1LTQ2LTQ2LTQ2em0tNDMuNjczLTE2NS4zNDZsNy40MTggMTM2Yy4zNDcgNi4zNjQgNS42MDkgMTEuMzQ2IDExLjk4MiAxMS4zNDZoNDguNTQ2YzYuMzczIDAgMTEuNjM1LTQuOTgyIDExLjk4Mi0xMS4zNDZsNy40MTgtMTM2Yy4zNzUtNi44NzQtNS4wOTgtMTIuNjU0LTExLjk4Mi0xMi42NTRoLTYzLjM4M2MtNi44ODQgMC0xMi4zNTYgNS43OC0xMS45ODEgMTIuNjU0eicvPjwvc3ZnPg==)
+      1 url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA1MTIgNTEyJyB3aWR0aD0nNTEyJyBoZWlnaHQ9JzUxMic+PHBhdGggZmlsbD0ncmdiKDI1NSwyNTUsMjU1KScgZD0nTTI1NiA4QzExOSA4IDggMTE5IDggMjU2czExMSAyNDggMjQ4IDI0OCAyNDgtMTExIDI0OC0yNDhTMzkzIDggMjU2IDh6bTEyMS42IDMxMy4xYzQuNyA0LjcgNC43IDEyLjMgMCAxN0wzMzggMzc3LjZjLTQuNyA0LjctMTIuMyA0LjctMTcgMEwyNTYgMzEybC02NS4xIDY1LjZjLTQuNyA0LjctMTIuMyA0LjctMTcgMEwxMzQuNCAzMzhjLTQuNy00LjctNC43LTEyLjMgMC0xN2w2NS42LTY1LTY1LjYtNjUuMWMtNC43LTQuNy00LjctMTIuMyAwLTE3bDM5LjYtMzkuNmM0LjctNC43IDEyLjMtNC43IDE3IDBsNjUgNjUuNyA2NS4xLTY1LjZjNC43LTQuNyAxMi4zLTQuNyAxNyAwbDM5LjYgMzkuNmM0LjcgNC43IDQuNyAxMi4zIDAgMTdMMzEyIDI1Nmw2NS42IDY1LjF6Jy8+PC9zdmc+)
+      1 url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA1MTIgNTEyJyB3aWR0aD0nNTEyJyBoZWlnaHQ9JzUxMic+PHBhdGggZmlsbD0ncmdiKDI1NSwyNTUsMjU1KScgZD0nTTI1NiA4QzExOS4wNDMgOCA4IDExOS4wODMgOCAyNTZjMCAxMzYuOTk3IDExMS4wNDMgMjQ4IDI0OCAyNDhzMjQ4LTExMS4wMDMgMjQ4LTI0OEM1MDQgMTE5LjA4MyAzOTIuOTU3IDggMjU2IDh6bTAgMTEwYzIzLjE5NiAwIDQyIDE4LjgwNCA0MiA0MnMtMTguODA0IDQyLTQyIDQyLTQyLTE4LjgwNC00Mi00MiAxOC44MDQtNDIgNDItNDJ6bTU2IDI1NGMwIDYuNjI3LTUuMzczIDEyLTEyIDEyaC04OGMtNi42MjcgMC0xMi01LjM3My0xMi0xMnYtMjRjMC02LjYyNyA1LjM3My0xMiAxMi0xMmgxMnYtNjRoLTEyYy02LjYyNyAwLTEyLTUuMzczLTEyLTEydi0yNGMwLTYuNjI3IDUuMzczLTEyIDEyLTEyaDY0YzYuNjI3IDAgMTIgNS4zNzMgMTIgMTJ2MTAwaDEyYzYuNjI3IDAgMTIgNS4zNzMgMTIgMTJ2MjR6Jy8+PC9zdmc+)
+      1 url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA1MTIgNTEyJyB3aWR0aD0nNTEyJyBoZWlnaHQ9JzUxMic+PHBhdGggZmlsbD0ncmdiKDI1NSwyNTUsMjU1KScgZD0nTTE3My44OTggNDM5LjQwNGwtMTY2LjQtMTY2LjRjLTkuOTk3LTkuOTk3LTkuOTk3LTI2LjIwNiAwLTM2LjIwNGwzNi4yMDMtMzYuMjA0YzkuOTk3LTkuOTk4IDI2LjIwNy05Ljk5OCAzNi4yMDQgMEwxOTIgMzEyLjY5IDQzMi4wOTUgNzIuNTk2YzkuOTk3LTkuOTk3IDI2LjIwNy05Ljk5NyAzNi4yMDQgMGwzNi4yMDMgMzYuMjA0YzkuOTk3IDkuOTk3IDkuOTk3IDI2LjIwNiAwIDM2LjIwNGwtMjk0LjQgMjk0LjQwMWMtOS45OTggOS45OTctMjYuMjA3IDkuOTk3LTM2LjIwNC0uMDAxeicvPjwvc3ZnPg==)
