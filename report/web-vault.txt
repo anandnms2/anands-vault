@@ -1,0 +1,17 @@
+## version
+
+## top
+ls: cannot access 'wv': No such file or directory
+## images
+find: ‘wv’: No such file or directory
+## files mentioning logo in name
+find: ‘wv’: No such file or directory
+## index.html
+cat: wv/index.html: No such file or directory
+## theme css
+## inline svg/data-uri logos in js
+grep: wv: No such file or directory
+## references to image paths in js/css
+grep: wv: No such file or directory
+## vaultwarden mentions in css
+grep: wv: No such file or directory
