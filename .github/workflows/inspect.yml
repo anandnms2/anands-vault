@@ -17,19 +17,17 @@ jobs:
           docker cp vwx:/web-vault ./wv >/dev/null 2>&1
           cd wv
           {
-            echo "## css rules for logo classes"
-            grep -ohE '[^}]{0,200}(new-logo|logo-themed|logo-white|logo-dark|logo\.svg)[^{]{0,200}\{[^}]*\}' styles.*.css | head -20
-            echo; echo "## js: class/identifier hints"
-            grep -rhoE '.{80}(new-logo-themed|bitwarden-logo|BitwardenLogo|BitwardenShield|bitwarden-shield|logo-themed).{120}' --include=*.js . | head -25
-            echo; echo "## js files with inline wordmark/shield svg (viewBox)"
-            grep -rhoE 'viewBox:? ?"0 0 [0-9.]+ [0-9.]+"' --include=*.js . | sort | uniq -c | sort -rn | head -25
-            echo; echo "## svg files with 'bitwarden' text"
-            grep -rliE 'bitwarden|vaultwarden' --include=*.svg --include=*.json --include=*.html --include=*.xml . | head -30
-            echo; echo "## 'Vaultwarden' count in app js & locales"
-            grep -rlc 'Vaultwarden' --include=*.js . | head; ls locales | wc -l
-            echo; echo "## .logo/tw-logo style sheets mentioning background logos"
-            grep -ohE '[^}]{0,120}url\(images/logo[^)]*\)[^}]{0,120}\}' styles.*.css | head
-          } > ../report/web-vault2.txt 2>&1
+            echo "## new-logo-themed anywhere"
+            grep -rhoE '.{0,160}new-logo-themed.{0,300}' --include=*.css --include=*.html . | head -12
+            echo; echo "## bwi-bitwarden-shield css"
+            grep -rhoE '.{0,40}bwi-bitwarden-shield[^}]{0,200}\}' --include=*.css . | head -8
+            echo; echo "## other bitwarden-logo css classes"
+            grep -rhoE '[.a-z_-]*(bitwarden|logo)[a-z_-]*[^{}]{0,60}\{[^}]{0,200}\}' styles.*.css | head -30
+            echo; echo "## svg path-heavy components in main.js: ids of logo svg (aria/title)"
+            grep -rhoE '.{100}(Bitwarden logo|bitwarden logo|logoLabel|aria-label","Bitwarden).{100}' --include=*.js . | head -10
+            echo; echo "## webauthn connector titles"
+            grep -ohE '<title>[^<]*</title>' ./*.html
+          } > ../report/web-vault3.txt 2>&1
           cd ..
           git config user.name gha; git config user.email gha@users.noreply.github.com
           git add report && git commit -qm "inspect report 2"; git pull -q --rebase origin main; git push
