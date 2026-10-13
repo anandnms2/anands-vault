@@ -1,0 +1,29 @@
+name: diag
+on:
+  push:
+    paths: ['.github/workflows/diag.yml', 'scripts/inspect2.py']
+permissions:
+  contents: write
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and inspect
+        run: |
+          set +e
+          mkdir -p report
+          docker build --progress=plain --build-arg PUBLIC_URL=https://pass.anands.xyz -t av . > report/build.log 2>&1
+          docker create --name avx av >/dev/null 2>&1
+          docker cp avx:/web-vault ./wv >/dev/null 2>&1
+          { grep -n "patched\|replaced\|not found\|renamed" report/build.log; echo ---; grep -c 'Vaultwarden Web' wv/app/main.*.js; grep -o 'A modified version.\{0,60\}' wv/app/main.*.js | head -3; ls wv/app; } > report/diag.txt 2>&1
+          docker run --rm --entrypoint sh av -c 'ls /web-vault/app; grep -c "Vaultwarden Web" /web-vault/app/main.*.js' >> report/diag.txt 2>&1
+          rm -rf wv
+          wget -qO- https://raw.githubusercontent.com/x/y/z >/dev/null 2>&1
+          docker rm avx >/dev/null 2>&1
+          docker create --name vwx vaultwarden/server:latest >/dev/null 2>&1
+          docker cp vwx:/web-vault ./wv >/dev/null 2>&1
+          python3 scripts/inspect2.py > report/py5.log 2>&1
+          rm -rf wv
+          git config user.name gha; git config user.email gha@users.noreply.github.com
+          git add report && git commit -qm "diag report"; git pull -q --rebase origin main; git push
