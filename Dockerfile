@@ -13,6 +13,9 @@ COPY --from=upstream /web-vault /web-vault
 COPY web-vault/ /web-vault/
 COPY scripts/ /scripts/
 RUN node /scripts/brand-strings.mjs /web-vault "${BRAND_NAME}" \
+ && node /scripts/patch-logos.mjs /web-vault "${BRAND_NAME}" \
+ && sed -i "s/alt=\"Bitwarden\"/alt=\"${BRAND_NAME}\"/g; s/Bitwarden Web vault/${BRAND_NAME}/g; s/Bitwarden \(Duo Redirect\|WebAuthn\) Connector/${BRAND_NAME} \1 Connector/g; s/<title>Bitwarden<\/title>/<title>${BRAND_NAME}<\/title>/g" /web-vault/*.html \
+ && sed -i "s/Vaultwarden Web/${BRAND_NAME}/g; s/\"Bitwarden\"/\"${BRAND_NAME}\"/g" /web-vault/*.json \
  && sed -i "s/Vaultwarden Web/${BRAND_NAME}/g; s/alt=\"Vaultwarden\"/alt=\"${BRAND_NAME}\"/g" \
         /web-vault/index.html /web-vault/manifest.json \
  && sed -i 's/#175DDC/#F68712/g' /web-vault/index.html

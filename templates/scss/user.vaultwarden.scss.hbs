@@ -79,3 +79,21 @@ html.theme_dark {
   --color-hover-default: rgb(246 135 18 / 0.12);
   --color-bw-blue: 246 135 18;
 }
+
+/* Logos drawn inline by the web vault: show the light or dark variant by theme */
+html.theme_dark .av-on-light { display: none; }
+html:not(.theme_dark) .av-on-dark { display: none; }
+/* Navigation always sits on a dark bar: use the white wordmark */
+nav .av-on-light, bit-side-nav .av-on-light, bit-nav-logo .av-on-light { display: none; }
+nav .av-on-dark, bit-side-nav .av-on-dark, bit-nav-logo .av-on-dark { display: inline; }
+
+/* The shield icon is a font glyph: replace it with our mark */
+.bwi-bitwarden-shield:before {
+  content: "" !important;
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: -0.15em;
+  background: url(../images/icon-white.png) center / contain no-repeat;
+}
+html:not(.theme_dark) main .bwi-bitwarden-shield:before { background-image: url(../images/icon-dark.png); }
