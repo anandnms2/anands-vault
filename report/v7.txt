@@ -1,6 +1,12 @@
---color-brand-500:  [-]  --color-brand-500: #418bfb;
---color-bg-brand:  [-]  --color-bg-brand: var(--color-brand-700);
---color-bg-brand:  [.theme_dark]  --color-bg-brand: var(--color-brand-400);
---color-fg-brand:  [-]  --color-fg-brand: var(--color-brand-700);
---color-fg-brand:  [.theme_dark]  --color-fg-brand: var(--color-brand-400);
---color-gray-900:  [-]  --color-gray-900: #0f172b;
+css files: wv/styles.69a03b1c9e8d1aef7100.css
+styles.69a03b1c9e8d1aef7100.css: tw-bg-bg-nav :: nactive {   background-color: var(--color-bg-inactive); }  .tw-bg-bg-nav {   background-color: var(--color-nav-bg-primary); }  .tw-bg-bg-nav-hover {   background-color: var(--color-nav-bg-primary-hover); }  .tw-bg-bg-ove
+styles.69a03b1c9e8d1aef7100.css: tw-bg-bg-nav :: -nav {   background-color: var(--color-nav-bg-primary); }  .tw-bg-bg-nav-hover {   background-color: var(--color-nav-bg-primary-hover); }  .tw-bg-bg-overlay {   background-color: var(--color-bg-overlay); }  .tw-bg-bg-pri
+styles.69a03b1c9e8d1aef7100.css: tw-bg-bg-nav-hover :: -nav {   background-color: var(--color-nav-bg-primary); }  .tw-bg-bg-nav-hover {   background-color: var(--color-nav-bg-primary-hover); }  .tw-bg-bg-overlay {   background-color: var(--color-bg-overlay); }  .tw-bg-bg-pri
+styles.69a03b1c9e8d1aef7100.css: tw-bg-bg-nav-hover :: ackground-color: var(--color-bg-hover-contrast); }  .hover\:tw-bg-bg-nav-hover:hover {   background-color: var(--color-nav-bg-primary-hover); }  .hover\:tw-bg-bg-quaternary:hover {   background-color: var(--color-bg-quat
+styles.69a03b1c9e8d1aef7100.css: tw-text-fg-nav :: ctive {   color: var(--color-fg-inactive) !important; }  .\!tw-text-fg-nav {   color: var(--color-nav-fg-primary) !important; }  .\!tw-text-fg-success-strong {   color: var(--color-fg-success-strong) !important; }  .\!tw
+styles.69a03b1c9e8d1aef7100.css: tw-text-fg-nav :: w-text-fg-inactive {   color: var(--color-fg-inactive); }  .tw-text-fg-nav {   color: var(--color-nav-fg-primary); }  .tw-text-fg-success {   color: var(--color-fg-success); }  .tw-text-fg-success-strong {   color: var(-
+styles.69a03b1c9e8d1aef7100.css: bg-nav :: e {   background-color: var(--color-bg-inactive); }  .tw-bg-bg-nav {   background-color: var(--color-nav-bg-primary); }  .tw-bg-bg-nav-hover {   background-color: var(--color-nav-bg-primary-hover); }  .tw-bg-bg-overlay {
+styles.69a03b1c9e8d1aef7100.css: bg-nav ::    background-color: var(--color-nav-bg-primary); }  .tw-bg-bg-nav-hover {   background-color: var(--color-nav-bg-primary-hover); }  .tw-bg-bg-overlay {   background-color: var(--color-bg-overlay); }  .tw-bg-bg-primary {
+styles.69a03b1c9e8d1aef7100.css: fg-nav :: fg-inactive {   fill: var(--color-fg-inactive); }  .tw-fill-fg-nav {   fill: var(--color-nav-fg-primary); }  .tw-fill-fg-white {   fill: var(--color-fg-white); }  .tw-fill-illustration-bg-primary {   fill: rgb(var(--colo
+styles.69a03b1c9e8d1aef7100.css: fg-nav ::   color: var(--color-fg-inactive) !important; }  .\!tw-text-fg-nav {   color: var(--color-nav-fg-primary) !important; }  .\!tw-text-fg-success-strong {   color: var(--color-fg-success-strong) !important; }  .\!tw-text-fg
+styles.69a03b1c9e8d1aef7100.css: nav-divider :: ackground-color: var(--color-border-base); }  .tw-bg-border-nav-divider {   background-color: var(--color-nav-border-primary); }  .tw-bg-danger-100 {   --tw-bg-opacity: 1;   background-color: rgb(var(--color-danger-100) 
