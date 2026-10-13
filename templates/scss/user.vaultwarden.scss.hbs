@@ -1,0 +1,81 @@
+/* Anands Vault theme: orange accent, black and grey surfaces.
+   Selectors are html:root / html.theme_dark so they beat the bundled
+   :root / .theme_dark rules regardless of stylesheet order. */
+
+/* ---------- Light theme ---------- */
+html:root {
+  /* Legacy layer: space-separated R G B triplets */
+  --color-background-alt: 244 244 245;
+  --color-background-alt2: 24 24 27;      /* dark panels */
+  --color-background-alt3: 24 24 27;      /* nav menu background */
+  --color-background-alt4: 9 9 11;        /* active nav item */
+
+  --color-primary-100: 254 237 213;       /* light orange tint */
+  --color-primary-300: 82 82 91;          /* nav item hover (grey) */
+  --color-primary-600: 180 83 9;          /* links and buttons: 5.0:1 on white */
+  --color-primary-700: 143 66 0;          /* hover: 7.1:1 on white */
+
+  --color-secondary-100: 244 244 245;
+  --color-secondary-300: 161 161 170;
+  --color-secondary-500: 113 113 122;
+  --color-secondary-600: 82 82 91;
+  --color-secondary-700: 63 63 70;
+
+  --color-text-main: 24 24 27;
+  --color-text-muted: 113 113 122;
+  --color-hover-default: rgb(246 135 18 / 0.1);
+  --color-bw-blue: 246 135 18;
+
+  /* New palette layer: hex values */
+  --color-brand-050: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f68712;             /* your logo orange */
+  --color-brand-600: #d96f00;
+  --color-brand-700: #b45309;
+  --color-brand-800: #8f4200;
+  --color-brand-900: #6b3200;
+  --color-brand-950: #3f1d00;
+  --color-brand-950-rgb: 63, 29, 0;
+
+  --color-gray-050: #fafafa;
+  --color-gray-100: #f4f4f5;
+  --color-gray-200: #e4e4e7;
+  --color-gray-300: #d4d4d8;
+  --color-gray-400: #a1a1aa;
+  --color-gray-400-rgb: 161, 161, 170;
+  --color-gray-500: #71717a;
+  --color-gray-600: #52525b;
+  --color-gray-700: #3f3f46;
+  --color-gray-800: #27272a;
+  --color-gray-900: #18181b;
+  --color-gray-950: #09090b;
+  --color-gray-950-rgb: 9, 9, 11;
+}
+
+/* ---------- Dark theme ---------- */
+html.theme_dark {
+  --color-background: 24 24 27;
+  --color-background-alt: 18 18 20;
+  --color-background-alt2: 39 39 42;
+  --color-background-alt3: 39 39 42;
+  --color-background-alt4: 9 9 11;
+
+  --color-primary-100: 63 29 0;
+  --color-primary-300: 120 53 15;
+  --color-primary-600: 255 169 77;        /* 7.9:1 on the dark background */
+  --color-primary-700: 255 192 120;
+
+  --color-secondary-100: 39 39 42;
+  --color-secondary-300: 82 82 91;
+  --color-secondary-500: 113 113 122;
+  --color-secondary-600: 161 161 170;
+  --color-secondary-700: 212 212 216;
+
+  --color-text-main: 244 244 245;
+  --color-text-muted: 161 161 170;
+  --color-hover-default: rgb(246 135 18 / 0.12);
+  --color-bw-blue: 246 135 18;
+}
