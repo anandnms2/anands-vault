@@ -13,20 +13,23 @@ jobs:
         run: |
           set +e
           mkdir -p report
-          docker pull vaultwarden/server:latest > report/docker.txt 2>&1
-          docker create --name vwx vaultwarden/server:latest >> report/docker.txt 2>&1
-          docker cp vwx:/web-vault ./wv >> report/docker.txt 2>&1
-          docker image inspect vaultwarden/server:latest --format '{{.Config.Entrypoint}} {{.Config.Cmd}}' >> report/docker.txt 2>&1
+          docker create --name vwx vaultwarden/server:latest >/dev/null 2>&1
+          docker cp vwx:/web-vault ./wv >/dev/null 2>&1
+          cd wv
           {
-            echo "## version"; cat wv/version.json 2>/dev/null; echo
-            echo "## top"; ls wv | head -50
-            echo "## images"; find wv -type f \( -name '*.png' -o -name '*.svg' -o -name '*.ico' -o -name '*.webp' \) -printf '%P %s\n' | sort
-            echo "## files mentioning logo in name"; find wv -iname '*logo*' -o -iname '*shield*' -o -iname '*vaultwarden*' -o -iname '*bitwarden*' | head -50
-            echo "## index.html"; cat wv/index.html | head -c 4000
-            echo "## theme css"; ls wv/css 2>/dev/null
-            echo "## inline svg/data-uri logos in js"; grep -rlE 'data:image/svg\+xml|viewBox="0 0 (1[0-9]{2}|[0-9]{2,3}) ' wv --include=*.js | head -20
-            echo "## references to image paths in js/css"; grep -rhoE '[A-Za-z0-9_./-]*(logo|shield|icon)[A-Za-z0-9_@.-]*\.(png|svg|ico)' wv --include=*.js --include=*.css --include=*.html | sort | uniq -c | sort -rn | head -60
-            echo "## vaultwarden mentions in css"; grep -rho 'url([^)]*)' wv --include=*.css | sort | uniq -c | sort -rn | head -40
-          } > report/web-vault.txt 2>&1
+            echo "## css rules for logo classes"
+            grep -ohE '[^}]{0,200}(new-logo|logo-themed|logo-white|logo-dark|logo\.svg)[^{]{0,200}\{[^}]*\}' styles.*.css | head -20
+            echo; echo "## js: class/identifier hints"
+            grep -rhoE '.{80}(new-logo-themed|bitwarden-logo|BitwardenLogo|BitwardenShield|bitwarden-shield|logo-themed).{120}' --include=*.js . | head -25
+            echo; echo "## js files with inline wordmark/shield svg (viewBox)"
+            grep -rhoE 'viewBox:? ?"0 0 [0-9.]+ [0-9.]+"' --include=*.js . | sort | uniq -c | sort -rn | head -25
+            echo; echo "## svg files with 'bitwarden' text"
+            grep -rliE 'bitwarden|vaultwarden' --include=*.svg --include=*.json --include=*.html --include=*.xml . | head -30
+            echo; echo "## 'Vaultwarden' count in app js & locales"
+            grep -rlc 'Vaultwarden' --include=*.js . | head; ls locales | wc -l
+            echo; echo "## .logo/tw-logo style sheets mentioning background logos"
+            grep -ohE '[^}]{0,120}url\(images/logo[^)]*\)[^}]{0,120}\}' styles.*.css | head
+          } > ../report/web-vault2.txt 2>&1
+          cd ..
           git config user.name gha; git config user.email gha@users.noreply.github.com
-          git add report && git commit -qm "inspect report" && git pull -q --rebase origin main; git push
+          git add report && git commit -qm "inspect report 2"; git pull -q --rebase origin main; git push
