@@ -1,0 +1,51 @@
+## img.new-logo-themed css
+
+## svg viewBoxes in js (count)
+      9 viewBox="0 0 40 24
+      6 viewBox="0 0 48 29
+      3 viewBox="0 10 80 60
+      2 viewBox='0 0 24 24
+      2 viewBox="5 4 87 87
+      2 viewBox="0 0 800 200
+      1 viewBox="9 4 83.89 91
+      1 viewBox="5.52 2.62 110 110
+      1 viewBox="5.29 4.98 86.89 90.19
+      1 viewBox="4.8 6 110.4 107.52
+      1 viewBox="4.72 12.85 92 80
+      1 viewBox="4.17 0.75 91.67 95.83
+      1 viewBox="4 4.5 91.63 88
+      1 viewBox="4 4 88 88
+      1 viewBox="4 0.5 90.32 96
+      1 viewBox="3.76 4 88.24 88.24
+      1 viewBox="3.33 3.33 76.49 75.83
+      1 viewBox="3.33 3.33 73.33 73.33
+      1 viewBox="3.33 10 71.27 66.67
+      1 viewBox="3.33 0.87 76.36 76.8
+      1 viewBox="3.33 0.46 73.33 76.8
+      1 viewBox="11.6 3.33 56.67 73.33
+      1 viewBox="0.7 2.4 79.3 77.2
+      1 viewBox="0.52 0.12 120 120
+      1 viewBox="0.4 10.07 79.2 60
+      1 viewBox="0.22 7 95.71 88
+      1 viewBox="0 8.33 80 66.67
+      1 viewBox="0 18.75 150 112.5
+      1 viewBox="0 14.58 100 75
+      1 viewBox="0 12.75 96 72
+      1 viewBox="0 12.12 96 76
+      1 viewBox="0 10 80 66.67
+      1 viewBox="0 1.49 96 94.02
+      1 viewBox="0 0.99 80 73.35
+      1 viewBox="0 0 80 73.33
+      1 viewBox="0 0 684 291
+      1 viewBox="0 0 60 60
+      1 viewBox="0 0 580 104
+      1 viewBox="0 0 506 297
+      1 viewBox="0 0 501 226
+
+## logo-ish svg literals: file, viewBox, first 200 chars
+./app/main.a46e2355765814789865.js: <svg version="1.1" viewBox="0 0 290 60" xmlns="http://www.w3.org/2000/svg">
+
+## bwi shield glyph class in js
+s:lx}])],decls:2,vars:3,consts:[[1,"tw-mb-6"],["startIcon","bwi-bitwarden-shield",3,"dismiss","title","subtitle"],[3,"title","completed","is
+
+## service worker / cache headers
