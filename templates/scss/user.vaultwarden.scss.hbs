@@ -80,12 +80,11 @@ html.theme_dark {
   --color-bw-blue: 246 135 18;
 }
 
-/* Logos drawn inline by the web vault: show the light or dark variant by theme */
+/* Logos drawn inline by the web vault: light or dark variant by theme */
 html.theme_dark .av-on-light { display: none; }
 html:not(.theme_dark) .av-on-dark { display: none; }
-/* Navigation always sits on a dark bar: use the white wordmark */
-nav .av-on-light, bit-side-nav .av-on-light, bit-nav-logo .av-on-light { display: none; }
-nav .av-on-dark, bit-side-nav .av-on-dark, bit-nav-logo .av-on-dark { display: inline; }
+#bit-side-nav .av-on-light { display: inline !important; }
+#bit-side-nav .av-on-dark { display: none !important; }
 
 /* The shield icon is a font glyph: replace it with our mark */
 .bwi-bitwarden-shield:before {
@@ -98,21 +97,81 @@ nav .av-on-dark, bit-side-nav .av-on-dark, bit-nav-logo .av-on-dark { display: i
 }
 html:not(.theme_dark) main .bwi-bitwarden-shield:before { background-image: url(../images/icon-dark.png); }
 
-/* Top / side navigation uses its own token set (new web vault design system) */
+/* Navigation tokens (new web vault design system) */
 html:root, html.theme_dark {
   --color-nav-bg-primary: #18181B;
   --color-nav-bg-primary-hover: #27272A;
+  --color-nav-bg-primary-strong: #09090B;
+  --color-nav-bg-primary-hover-strong: #18181B;
   --color-nav-bg-secondary: #18181B;
   --color-nav-bg-secondary-hover: #27272A;
+  --color-nav-bg-secondary-strong: #09090B;
+  --color-nav-bg-secondary-hover-strong: #18181B;
   --color-nav-fg-primary: #FFFFFF;
   --color-nav-fg-secondary: #E4E4E7;
   --color-nav-border-primary: #3F3F46;
   --color-nav-border-secondary: #3F3F46;
   --color-nav-border-focus: #F68712;
-  --color-nav-bg-selected: #09090B;
-  --color-nav-bg-active: #09090B;
+  --color-bw-blue: 246 135 18;
 }
-/* Active nav item: orange underline like the design */
-bit-nav-item [aria-current="page"], bit-nav-item .active, a[aria-current="page"].tw-bg-bg-nav-hover {
-  box-shadow: inset 3px 0 0 #F68712;
+
+/* Illustrations (blue by default) recoloured to the orange / grey palette */
+html:root {
+  --color-illustration-outline: 39 39 42;
+  --color-illustration-bg-primary: 228 228 231;
+  --color-illustration-bg-secondary: 253 186 116;
+  --color-illustration-bg-tertiary: 250 250 250;
+  --color-illustration-tertiary: 246 135 18;
+  --color-illustration-logo: 24 24 27;
 }
+html.theme_dark {
+  --color-illustration-outline: 244 244 245;
+  --color-illustration-bg-primary: 63 63 70;
+  --color-illustration-bg-secondary: 124 45 18;
+  --color-illustration-bg-tertiary: 39 39 42;
+  --color-illustration-tertiary: 255 169 77;
+  --color-illustration-logo: 255 255 255;
+}
+/* Blue bitmaps (welcome dialog, extension promo) */
+img[src*="welcome-dialog-graphic"], img[src*="vault-signup-badges"], img[src*="sm-give-access"] { filter: hue-rotate(170deg) saturate(1.05); }
+
+/* ===== Top navigation (replaces the left sidebar) ===== */
+bit-layout > div[class*="tw-grid"] { grid-template-columns: minmax(0,1fr) !important; grid-template-rows: 56px minmax(0,1fr) !important; }
+bit-layout > div[class*="tw-grid"] > app-side-nav { grid-column: 1; grid-row: 1; height: 56px; position: relative; z-index: 40; display: block; }
+bit-layout > div[class*="tw-grid"] > main { grid-column: 1 !important; grid-row: 2 !important; }
+bit-layout > div[class*="tw-grid"] > div.tw-col-start-2, bit-layout > div[class*="tw-grid"] > div.tw-col-start-3 { grid-column: 1 !important; grid-row: 2 !important; }
+app-side-nav bit-side-nav, app-side-nav bit-side-nav > div.tw-relative { height: 56px !important; width: 100% !important; }
+app-side-nav bit-side-nav > div.tw-relative > div.tw-h-full.tw-w-1 { display: none !important; }
+#bit-side-nav { width: 100% !important; height: 56px !important; flex-direction: row !important; overflow: visible !important; position: relative !important; }
+#bit-side-nav > div:first-child { container-type: normal !important; overflow: visible !important; flex: 1 1 auto !important; min-height: 0; }
+#bit-side-nav > div:first-child > div { flex-direction: row !important; min-height: 0 !important; }
+#bit-side-nav > div:first-child > div > div.tw-flex-1 { display: flex; flex-direction: row; align-items: stretch; height: 56px; padding: 0 20px; gap: 2px; }
+#bit-side-nav > div.tw-w-full, #bit-side-nav > div:first-child > div > div:not(.tw-flex-1) { display: none !important; }
+#bit-side-nav bit-nav-logo { display: flex !important; align-items: center; margin-right: 24px; }
+#bit-side-nav bit-nav-logo > div { padding: 0 !important; position: static !important; background: transparent !important; }
+#bit-side-nav bit-nav-logo a { height: 34px !important; width: 170px; padding: 0 !important; display: flex; align-items: center; }
+#bit-side-nav bit-nav-logo bit-svg { justify-content: flex-start !important; }
+#bit-side-nav bit-nav-logo svg { width: 170px; height: 34px; }
+#bit-side-nav bit-nav-item, #bit-side-nav bit-nav-group { display: flex; align-items: stretch; }
+#bit-side-nav bit-nav-group { position: relative; }
+#bit-side-nav bit-nav-item > div { padding: 0 !important; display: flex; width: 100%; }
+#bit-side-nav [data-testid="nav-item-container"] { height: 56px !important; width: 100%; border-radius: 0 !important; padding-inline-start: 0 !important; display: flex; align-items: center; border-bottom: 3px solid transparent; background: transparent !important; }
+#bit-side-nav [data-testid="nav-item-container"] > div { padding: 0; width: 100%; }
+#bit-side-nav [data-testid="nav-item-container"] a { padding: 0 18px !important; display: flex !important; align-items: center; }
+#bit-side-nav [data-testid="nav-item-container"]:hover { background: #27272A !important; }
+#bit-side-nav [data-testid="nav-item-container"]:has(a[aria-current="page"]) { background: #09090B !important; border-bottom-color: #F68712; }
+#bit-side-nav [data-testid="nav-group-collapse-arrow"], #bit-side-nav [data-testid="nav-item-container"] > div > div.tw-absolute { display: none !important; }
+#bit-side-nav bit-nav-group > div[role="group"] { position: absolute; top: 56px; left: 0; min-width: 220px; background: #18181B; border: 1px solid #3F3F46; border-top: 0; border-radius: 0 0 10px 10px; padding: 6px 0; z-index: 70; box-shadow: 0 12px 24px rgba(0,0,0,.25); display: block; }
+#bit-side-nav bit-nav-group > div[role="group"] bit-nav-item { display: block; }
+#bit-side-nav bit-nav-group > div[role="group"] [data-testid="nav-item-container"] { height: 40px !important; border-bottom: 0 !important; }
+#bit-side-nav bit-nav-group > div[role="group"] [data-testid="nav-item-container"]:has(a[aria-current="page"]) { box-shadow: inset 3px 0 0 #F68712; }
+
+/* ===== Login / sign-up pages ===== */
+bit-landing-content bit-svg { display: none !important; }
+bit-landing-content > div { background: transparent !important; }
+bit-landing-content div.tw-max-w-md { max-width: 440px; }
+bit-landing-header header { background: transparent !important; }
+bit-landing-footer footer { background: transparent !important; font-size: 12px; color: rgb(113 113 122); }
+bit-landing-footer footer > div:nth-of-type(3) { display: none; }
+bit-landing-footer footer > div:nth-of-type(2) { font-weight: 600; }
+html.theme_dark bit-landing-footer footer { color: rgb(161 161 170); }

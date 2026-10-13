@@ -1,7 +1,8 @@
 // Usage: node patch-logos.mjs <web-vault-dir> "<Brand Name>"
 // Vaultwarden's web vault draws several logos as inline SVG inside app/main.*.js.
 // Replace each with an SVG that points at our own image files (images/logo*.svg, icon-*.png).
-import { readFileSync, writeFileSync, readdirSync } from "node:fs";
+import { readFileSync, writeFileSync, readdirSync, renameSync, existsSync } from "node:fs";
+import { createHash } from "node:crypto";
 
 const [dir, name] = process.argv.slice(2);
 const f = readdirSync(`${dir}/app`).find((n) => /^main\..*\.js$/.test(n));
@@ -48,5 +49,23 @@ let t = 0;
 for (const [a, b] of swaps) { const c = js.split(a).length - 1; if (c) { js = js.split(a).join(b); t += c; } else console.warn("not found:", a.slice(0, 50)); }
 console.log(`replaced ${t} hard-coded text strings`);
 writeFileSync(path, js);
+
+// Cache-bust: the bundle file name is unchanged by our edits, so browsers keep serving the old copy.
+// Give it a new content-based name and update every reference.
+const oldHash = f.match(/^main\.(.*)\.js$/)[1];
+const newHash = createHash("sha1").update(js).digest("hex").slice(0, oldHash.length);
+if (newHash !== oldHash) {
+  renameSync(path, `${dir}/app/main.${newHash}.js`);
+  if (existsSync(path + ".map")) renameSync(path + ".map", `${dir}/app/main.${newHash}.js.map`);
+  const walk = (d) => readdirSync(d, { withFileTypes: true }).flatMap((e) =>
+    e.isDirectory() ? (e.name === "locales" || e.name === "images" || e.name === "fonts" ? [] : walk(`${d}/${e.name}`)) : [`${d}/${e.name}`]);
+  let refs = 0;
+  for (const file of walk(dir)) {
+    if (!/\.(html|js|json|css)$/.test(file)) continue;
+    const t = readFileSync(file, "utf8");
+    if (t.includes(oldHash)) { writeFileSync(file, t.split(oldHash).join(newHash)); refs++; }
+  }
+  console.log(`renamed bundle ${oldHash} -> ${newHash}, updated ${refs} files`);
+}
 console.log(`patched ${n} inline logo SVGs in ${f}`);
 if (n < 4) { console.error("expected at least 4 replacements"); process.exit(1); }
