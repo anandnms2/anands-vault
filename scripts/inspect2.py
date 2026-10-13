@@ -1,9 +1,10 @@
-import re,glob
-css=open(glob.glob('wv/styles.*.css')[0],errors='ignore').read()
+import re,glob,os
 out=[]
-for key in ['--color-bg-nav:','--color-bg-nav-hover:','--color-fg-nav:','--color-border-nav-divider:','--color-brand-500:','--color-bg-brand:','--color-fg-brand:','--color-gray-900:']:
-    for m in re.finditer(re.escape(key),css):
-        # find enclosing selector
-        st=css.rfind('{',0,m.start()); sel=css[max(0,css.rfind('}',0,st)+1):st].strip()[-70:]
-        out.append('%s  [%s]  %s'%(key, sel, css[m.start():css.find(';',m.start())+1][:90]))
+files=glob.glob('wv/**/*.css',recursive=True)
+out.append('css files: '+' '.join(files))
+for f in files:
+    css=open(f,errors='ignore').read()
+    for key in ['tw-bg-bg-nav','tw-bg-bg-nav-hover','tw-text-fg-nav','bg-nav','fg-nav','nav-divider']:
+        for m in list(re.finditer(re.escape(key),css))[:2]:
+            out.append('%s: %s :: %s'%(os.path.basename(f),key,css[max(0,m.start()-60):m.start()+160].replace('\n',' ')))
 open('report/v7.txt','w').write('\n'.join(out))
