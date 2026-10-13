@@ -1,12 +1,9 @@
 import re,glob
 css=open(glob.glob('wv/styles.*.css')[0],errors='ignore').read()
 out=[]
-pat=re.compile(r'(--color-(?:bg-nav|bg-nav-hover|fg-nav|border-nav|bg-brand[\w-]*|fg-brand[\w-]*|border-brand[\w-]*|bg-hover[\w-]*|brand-\d+|gray-\d+|bg-primary|bg-secondary|bg-tertiary|bg-contrast|border-[\w-]*)):\s*([^;]+);')
-for m in re.finditer(r'([^{}]{0,80})\{([^{}]*--color-bg-nav[^{}]*)\}',css):
-    out.append('### SELECTOR: '+m.group(1).strip()[-80:])
-    out.append(' '.join('%s=%s'%(a,b.strip()) for a,b in pat.findall(m.group(2))))
-# any block defining brand scale
-for m in re.finditer(r'([^{}]{0,80})\{([^{}]*--color-brand-500[^{}]*)\}',css):
-    out.append('### BRAND SCALE SELECTOR: '+m.group(1).strip()[-80:])
-    out.append(' '.join('%s=%s'%(a,b.strip()) for a,b in re.findall(r'(--color-brand-\d+):\s*([^;]+);',m.group(2))))
+for key in ['--color-bg-nav:','--color-bg-nav-hover:','--color-fg-nav:','--color-border-nav-divider:','--color-brand-500:','--color-bg-brand:','--color-fg-brand:','--color-gray-900:']:
+    for m in re.finditer(re.escape(key),css):
+        # find enclosing selector
+        st=css.rfind('{',0,m.start()); sel=css[max(0,css.rfind('}',0,st)+1):st].strip()[-70:]
+        out.append('%s  [%s]  %s'%(key, sel, css[m.start():css.find(';',m.start())+1][:90]))
 open('report/v7.txt','w').write('\n'.join(out))
