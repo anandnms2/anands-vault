@@ -1,0 +1,93 @@
+## css new-logo-themed
+
+
+/**
+   * Logo, used both in loading and on "frontend" pages.
+   */
+
+img.new-logo-themed {
+  display: block;
+
+    width: 128px;
+}
+
+
+.theme_light img.new-logo-themed {
+    content: url(images/logo.svg);
+  }
+
+
+.theme_dark img.new-logo-themed {
+    content: url(images/logo-white.svg);
+  }
+## bwi-bitwarden-shield
+.bwi-bitwarden-shield:before {
+  content: "\f15d";
+}
+## svg literals
+--- 0 0 290 60 len 5074
+67h23.282a4.167 4.167 0 0 0 4.167-4.167V37.501H62.109Zm27.448-8.334a4.167 4.167 0 0 1 4.167 4.167v2.083h-31.59v-2.083a4.167 4.167 0 0 1 4.167-4.167h23.256Z" clip-rule="evenodd"/>
+  </svg>
+`,af=te.JW`
+<svg version="1.1" viewBox="0 0 290 60" xmlns="http://www.w3.org/2000/svg">
+  <title>Vaultwarden</title>
+  <path class="tw-fill-marketing-logo" d="m166 46-4.2-13q-.4-1.2-1.5-5.6h-.17q-.83 3.6-1.5 5.6l-4.3 13h-4l-6.2-23h3.6q2.2 8.6 3.3 13 1.2 4.5 1.3 6.1h.17q.23-1.2.73-3.1.52-1.9.89-3l4.2-13h3.7l4.1 13q1.2 3.6 1.6 6h.17q.083-.75.44-2.3.37-1.6 4.3-17h3.6l-6.3 23zm29 0-.69-3.2h-.17q-1.7 2.1-3.4 2.9-1.7.75-4.2.75-3.4 0-5.3-1.7-1.9-1.7-1.9-5 0-6.9 11-7.2l3.9-.12v-1.4q0-2.7-1.2-4-1.1-1.3-3.7-1.3-2.8 0-6.4 1.7l-1.1-2.6q1.7-.92 3.7-1.4 2-.52 4-.52 4.1 0 6 1.8 2 1.8 2 5.8v16zm-7.8-2.4q3.2 0 5.1-1.8 1.9-1.8 1.9-4.9v-2.1l-3.5.15q-4.1.15-5.9 1.3-1.8 1.1-1.8 3.5 0 1.9 1.1 2.8 1.1.98 3.2.98zm28-21q1.5 0 2 ...[cut]... .32 1.7 1.7 0 01.38 2.4 1.7 1.7 0 01-2.4.38 1.7 1.7 0 01-.38-2.4 1.7 1.7 0 011.5-.7zm27 0a1.7 1.7 0 011.5.7 1.7 1.7 0 01-.38 2.4 1.7 1.7 0 01-2.4-.38 1.7 1.7 0 01.38-2.4 1.7 1.7 0 01.91-.32z"/>
+</svg>
+--- 0 0 800 200 len 16091
+FF(11," Vaultwarden is not associated with the Bitwarden® project nor Bitwarden Inc. "),w.k0s()()),2&e&&(w.R7$(6),w.JRh(t.version))},dependencies:[Tv.G,R.n3,Tp.r,UE],encapsulation:2});const fS=te.JW`
+<svg version="1.1" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+<g class="tw-fill-fg-nav" clip-path="url(#password-manager-logo-clip)">
+ <path d="m457.16 129.39-11.407-36.49q-1.0783-3.3482-4.0292-15.209h-.454q-2.27 9.9313-3.9725 15.322l-11.747 36.377h-10.896l-16.968-62.197h9.8744q6.0158 23.438 9.137 35.696 3.178 12.258 3.632 16.514h.454q.62424-3.2347 1.9863-8.342 1.4188-5.1642 2.4402-8.1717l11.407-35.696h10.215l11.123 35.696q3.178 9.7611 4.313 16.401h.454q.227-2.043 1.1918-6.2993 1.0215-4.2562 11.861-45.797h9.7611l-17.195 62.197zm77.858 0-1.8727-8.8528h-.454q-4.6535 5.8455-9.3072 7.9451-4.5968 2.043-11.52 2.043-9.2503 0-14.528-4.767-5.221-4.767-5.221-13.563 0-18.841 30.134-19.74 ...[cut]... q1.4567-2.4651 3.7537-4.258 2.2971-1.7928 5.4345-1.7928z"/>
+</g>
+<defs>
+  <clipPath id="password-manager-logo-clip">
+    <path class="tw-fill-fg-nav" d="M0 0h800v200H0z"/>
+  </clipPath>
+</defs>
+</svg>
+--- 0 0 580 104 len 10200
+e,t,i){"use strict";i.d(t,{Fk:()=>r.F,rd:()=>n.r});var n=i(37806),r=i(91517)},91517(e,t,i){"use strict";i.d(t,{m:()=>V,F:()=>x});var n=i(84210),r=i(87806),s=i(34949),o=i(29236);const a=i(82392).JW`
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 104" fill="none">
+    <path class="tw-fill-text-alt2" d="M102.539 52.27c0 28.315-22.954 51.269-51.27 51.269C22.955 103.539 0 80.585 0 52.269 0 23.955 22.954 1 51.27 1c28.315 0 51.269 22.954 51.269 51.27Z"/>
+    <path class="tw-fill-bw-blue" fill-rule="evenodd" d="M75.971 26.765c-.516-.49-1.111-.777-1.786-.777H28.39c-.675 0-1.31.287-1.786.777-.516.49-.754 1.145-.754 1.84v31.47c0 2.371.437 4.66 1.31 6.95.873 2.288 1.984 4.332 3.294 6.13s2.897 3.515 4.682 5.232a62.036 62.036 0 0 0 5 4.25 82.731 82.731 0 0 0 4.802 3.188c1.667.981 2.857 1.676 3.572 2.003.714.368 1.27.613 1.706.817a2.26 2.26 0 0 0 1.032.246 2.26 2.26 0 0 0 1.032-.246c.436-.2 ...[cut]... .789 2.112-3.213 3.823-4.272 1.712-1.058 3.824-1.588 6.336-1.588v4.82h-1.256c-1.602 0-3.077.292-4.424.876-1.348.548-2.422 1.497-3.223 2.848-.801 1.35-1.202 3.213-1.202 5.586v13.692h-4.588Z"/>
+  </svg>
+--- 0 0 684 291 len 804011
+eturn new(e||CP)(B.KVO(N.D),B.KVO(zA.H),B.KVO(T.o),B.KVO(v.PV),B.KVO(G.y),B.KVO(b.v2),B.KVO(se.K),B.KVO(fP.aX),B.KVO(O.w))},CP.ɵprov=B.jDH({token:CP,factory:CP.ɵfac,providedIn:"root"});const IP=te.JW`<svg
+    width="684"
+    height="291"
+    viewBox="0 0 684 291"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+  >
+    <rect width="684" height="291" fill="#175DDC" />
+    <g clip-path="url(#clip0_4955_16369)">
+      <path
+        d="M85 28C85 23.5817 88.5817 20 93 20H591C595.418 20 599 23.5817 599 28V291H85V28Z"
+        fill="white"
+      />
+      <path
+        d="M85 28C85 23.5817 88.5817 20 93 20H591C595.418 20 599 23.5817 599 28V36H85V28Z"
+        fill="#D8E2EB"
+        fill-opacity="0.75"
+      />
+      <path d="M85 36H599V52H85V36Z" fill="#F3F6F9" />
+      <circle cx="95" cy="28" r="3" fill="#FF6550" />
+      <circle cx="104" cy="2 ...[cut]... Vj8kIGAEjYASMgBEwAkbACBgBI9BTBKzE9vTFelhGwAgYASNgBIyAETACRsAIGIE+ImAlto9v1WMyAkbACBgBI2AEjIARMAJGwAj0FAErsT19sR6WETACRsAIGAEjYASMgBEwAkagjwj8H1YcUTavogQtAAAAAElFTkSuQmCC"
+      />
+    </defs>
+  </svg>
+--- 0 0 60 60 len 3985
+3:-1)}},dependencies:[n.T3,c.Q,a.iI,a.Wk,a.wQ,l.R],encapsulation:2,changeDetection:0})},59557(e,t,i){"use strict";i.d(t,{K:()=>h});var n=i(46758),r=i(11217),s=i(24590),o=i(84522);const a=i(82392).JW`
+<svg version="1.1" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="none">
+<title>Vaultwarden</title>
+<g clip-path="url(#bitwarden-shield-clip)">
+ <path class="tw-fill-fg-nav" d="m18 11-5.6.00073 15 42h5.3l15-42h-5.6l-9.5 27c-.63 1.7-1.2 3.4-1.6 4.9-.43 1.5-.79 2.9-1.1 4.3-.28-1.4-.63-2.8-1.1-4.4-.43-1.5-.97-3.2-1.6-5l-9.5-27z"/>
+ <path class="tw-fill-fg-nav" d="m30 0.05c-0.19 0.068-0.34 0.2-0.44 0.37l-1.5 2.5c-0.27 0.022-0.53 0.046-0.8 0.076l-2-2.2c-0.43-0.44-1.2-0.29-1.4 0.29l-1 2.8c-0.26 0.074-0.51 0.15-0.77 0.23l-2.4-1.8c-0.52-0.45-1.3-0.12-1.4 0.56l-0.44 2.9c-0.23 0.12-0.47 0.24-0.7 0.37l-2.7-1.3c-0.58-0.26-1.2 0.18-1.2 0.81l0.14 3c-0.2 0.16-0.4 0.33-0.6 0.49l-2.9-0.72c-0.59 ...[cut]... 4-0.38-0.57-0.77-0.4-1.8 0.38-2.4 0.27-0.19 0.58-0.3 0.91-0.32z"/>
+</g>
+<defs>
+  <clipPath id="bitwarden-shield-clip">
+    <path class="tw-fill-fg-nav" d="M0 0h60v60H0z"/>
+  </clipPath>
+</defs>
+</svg>
