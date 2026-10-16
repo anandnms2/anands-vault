@@ -16,3 +16,15 @@ Not yet tested: the Docker build itself and the theme in a browser. See the guid
 3. Save and Deploy. The volume at /data (database, attachments, RSA keys) is reused as is.
 4. Rollback: set `image:` back to `vaultwarden/server:latest`.
 Before step 3, back up: stop nothing, just copy /data (or the sqlite/Postgres dump) first.
+
+## Login email pre-fill
+Set runtime env `ANANDS_VAULT_EMAIL` on the vaultwarden container (Coolify env, not in this public repo).
+The login screen then opens with that email already filled in; you type the master password (or let the browser fill it)
+and the OTP. Unset = no pre-fill. The master password is never stored or pre-filled by design.
+Implementation: `prefill/start.sh` wraps upstream's `/start.sh`, writes `/web-vault/anands-prefill.js` from the env var,
+and `index.html` loads it. Only the `#/login` route is touched, and nothing already typed is overwritten.
+
+## Fewer prompts (settings in the vault itself, per device)
+- Two-step login screen: tick **Remember me** on a trusted device, so the OTP is skipped for about 30 days.
+- Settings > Options > **Vault timeout**: longer, or "On browser restart"; timeout action: **Lock**.
+- Web extension / mobile app: Settings > Unlock with **PIN** or biometrics, so you rarely retype the master password.

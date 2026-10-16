@@ -31,6 +31,15 @@ COPY --from=brand /web-vault /web-vault
 COPY templates /branding/templates
 RUN test -n "${PUBLIC_URL}" \
  && sed -i "s|__PUBLIC_URL__|${PUBLIC_URL%/}|g" /branding/templates/email/email_header.hbs
+# Login email pre-fill (ANANDS_VAULT_EMAIL, set at runtime) via a wrapper around upstream's /start.sh.
+# The build fails loudly if upstream's start script or index.html ever change shape.
+COPY prefill /branding/prefill
+RUN test -f /start.sh \
+ && mv /start.sh /start-upstream.sh \
+ && cp /branding/prefill/start.sh /start.sh && chmod +x /start.sh \
+ && touch /web-vault/anands-prefill.js && chmod a+rw /web-vault/anands-prefill.js \
+ && sed -i 's#</head>#<script defer src="/anands-prefill.js"></script></head>#' /web-vault/index.html \
+ && grep -q 'anands-prefill.js' /web-vault/index.html
 ENV TEMPLATES_FOLDER=/branding/templates \
     SMTP_FROM_NAME="${BRAND_NAME}" \
     INVITATION_ORG_NAME="${BRAND_NAME}"
