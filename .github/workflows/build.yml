@@ -28,6 +28,7 @@ jobs:
           chk "server answers /alive" curl -fsS localhost:18088/alive
           chk "home page contains brand name" sh -c 'curl -fsS localhost:18088/ | grep -q "Anands Vault"'
           chk "custom css compiled" sh -c 'curl -fsS localhost:18088/css/vaultwarden.css | grep -q "nav-bg-primary"'
+          echo "::notice::LEFTOVERS: $(docker exec avtest sh -c 'grep -rlE "Vaultwarden Web|not associated with the Bitwarden" /web-vault/app /web-vault/index.html' | tr '\n' ' ')"
           chk "no Vaultwarden/Bitwarden footer text left" sh -c '! docker exec avtest sh -c "grep -rlE \"Vaultwarden Web|not associated with the Bitwarden\" /web-vault/app /web-vault/index.html" | grep -q .'
           chk "exactly one main bundle" sh -c 'docker exec avtest sh -c "ls /web-vault/app | grep -cE \"^main\\.[0-9a-f]+\\.js$\"" | grep -qx 1'
       - name: Debug info on failure
