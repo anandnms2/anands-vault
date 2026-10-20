@@ -24,12 +24,12 @@ jobs:
           set -e
           OUT=$(docker run -d --name avtest -p 18088:80 -e I_REALLY_WANT_VOLATILE_STORAGE=true -e DOMAIN=https://pass.anands.xyz av:test 2>&1) || { echo "::error::docker run failed: $OUT"; docker images 2>&1 | head -5; exit 1; }
           for i in $(seq 1 30); do curl -fsS localhost:18088/alive >/dev/null 2>&1 && break; sleep 2; done
-          curl -fsS localhost:18088/alive >/dev/null
-          curl -fsS localhost:18088/ | grep -q "Anands Vault"
-          curl -fsS localhost:18088/css/vaultwarden.css | grep -q "nav-bg-primary"
-          if docker exec avtest sh -c 'grep -rlE "Vaultwarden Web|not associated with the Bitwarden" /web-vault/app /web-vault/index.html' | grep -q .; then
-            echo "Branding leftovers found"; exit 1; fi
-          docker exec avtest sh -c 'ls /web-vault/app | grep -cE "^main\.[0-9a-f]+\.js$" | grep -qx 1'
+          chk() { local d="$1"; shift; "$@" >/dev/null 2>&1 || { echo "::error::SMOKE CHECK FAILED: $d"; exit 1; }; }
+          chk "server answers /alive" curl -fsS localhost:18088/alive
+          chk "home page contains brand name" sh -c 'curl -fsS localhost:18088/ | grep -q "Anands Vault"'
+          chk "custom css compiled" sh -c 'curl -fsS localhost:18088/css/vaultwarden.css | grep -q "nav-bg-primary"'
+          chk "no Vaultwarden/Bitwarden footer text left" sh -c '! docker exec avtest sh -c "grep -rlE \"Vaultwarden Web|not associated with the Bitwarden\" /web-vault/app /web-vault/index.html" | grep -q .'
+          chk "exactly one main bundle" sh -c 'docker exec avtest sh -c "ls /web-vault/app | grep -cE \"^main\\.[0-9a-f]+\\.js$\"" | grep -qx 1'
       - name: Debug info on failure
         if: failure()
         run: |
