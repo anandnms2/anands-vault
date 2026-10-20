@@ -22,11 +22,11 @@ jobs:
       - name: Smoke test - server starts and branding is intact
         run: |
           set -e
-          docker run -d --name t -p 8080:80 -e DOMAIN=https://pass.anands.xyz av:test
-          for i in $(seq 1 30); do curl -fsS localhost:8080/alive >/dev/null 2>&1 && break; sleep 2; done
-          curl -fsS localhost:8080/alive >/dev/null
-          curl -fsS localhost:8080/ | grep -q "Anands Vault"
-          curl -fsS localhost:8080/css/vaultwarden.css | grep -q "nav-bg-primary"
+          docker run -d --name t -p 18088:80 -e DOMAIN=https://pass.anands.xyz av:test
+          for i in $(seq 1 30); do curl -fsS localhost:18088/alive >/dev/null 2>&1 && break; sleep 2; done
+          curl -fsS localhost:18088/alive >/dev/null
+          curl -fsS localhost:18088/ | grep -q "Anands Vault"
+          curl -fsS localhost:18088/css/vaultwarden.css | grep -q "nav-bg-primary"
           if docker exec t sh -c 'grep -rlE "Vaultwarden Web|not associated with the Bitwarden" /web-vault/app /web-vault/index.html' | grep -q .; then
             echo "Branding leftovers found"; exit 1; fi
           docker exec t sh -c 'ls /web-vault/app | grep -c "^main\." | grep -qx 1'
