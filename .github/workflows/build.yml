@@ -29,7 +29,7 @@ jobs:
           curl -fsS localhost:18088/css/vaultwarden.css | grep -q "nav-bg-primary"
           if docker exec avtest sh -c 'grep -rlE "Vaultwarden Web|not associated with the Bitwarden" /web-vault/app /web-vault/index.html' | grep -q .; then
             echo "Branding leftovers found"; exit 1; fi
-          docker exec avtest sh -c 'ls /web-vault/app | grep -c "^main\." | grep -qx 1'
+          docker exec avtest sh -c 'ls /web-vault/app | grep -cE "^main\.[0-9a-f]+\.js$" | grep -qx 1'
       - name: Debug info on failure
         if: failure()
         run: |
